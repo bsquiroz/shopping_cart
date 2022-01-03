@@ -1,0 +1,24 @@
+.style_ProductDetails {
+    padding: 0 1em;
+}
+
+.content_product {
+    display: flex;
+    gap: 1em;
+    flex-wrap: wrap;
+}
+
+.content_options {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.boxProduct {
+    max-width: 400px;
+    margin: auto;
+}
+
+.boxProduct img {
+    width: 100%;
+}

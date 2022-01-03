@@ -7,7 +7,7 @@ export const OverlayShop = () => {
     return (
         <div className="container_overlay">
             {shopping.map((item) => (
-                <div className="card_overlay">
+                <div className="card_overlay" key={item.id}>
                     <div className="boxImgMin">
                         <img src={item.url} alt={item.name} />
                     </div>

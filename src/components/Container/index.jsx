@@ -1,9 +1,6 @@
 import React from "react";
+import "./styles.css";
 
 export const Container = ({ children }) => {
-    return (
-        <div style={{ maxWidth: "1200px", margin: "1em auto 0 auto" }}>
-            {children}
-        </div>
-    );
+    return <div className="style_container">{children}</div>;
 };

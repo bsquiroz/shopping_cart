@@ -1,16 +1,26 @@
 import React from "react";
 import { useShoppingContext } from "../../hooks/useShoppingContext";
 import "./styles.css";
+import IconShoppingCart from "../../assets/icon_svg/shopping_cart.svg";
 
-export const Carrito = () => {
+export const Carrito = ({ setShowMenu }) => {
     const { shopping, showOverlay, setShowOverlay } = useShoppingContext();
 
+    const handleShop = () => {
+        setShowOverlay(!showOverlay);
+        setShowMenu(false);
+    };
+
     return (
-        <span
-            onClick={() => setShowOverlay(!showOverlay)}
-            className="style_carrito"
-        >
-            Carrito <b>{shopping.length}</b>
+        <span onClick={handleShop} className="style_carrito">
+            {!showOverlay ? (
+                <>
+                    <img src={IconShoppingCart} alt="sc" />{" "}
+                    <b>{shopping.length}</b>
+                </>
+            ) : (
+                "Cerrar"
+            )}
         </span>
     );
 };

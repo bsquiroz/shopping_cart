@@ -1,9 +1,21 @@
-import { createContext, useState } from "react";
+import { createContext, useEffect, useState } from "react";
 
 export const ShoppingContext = createContext();
 
 export const ShoppingProvider = ({ children }) => {
-    const [shopping, setShopping] = useState([]);
+    const isShopping = localStorage.getItem("shopping");
+
+    const initialState = isShopping ? JSON.parse(isShopping) : [];
+    const [shopping, setShopping] = useState(initialState);
+
+    if (!isShopping) {
+        localStorage.setItem("shopping", JSON.stringify(shopping));
+    }
+
+    useEffect(() => {
+        localStorage.setItem("shopping", JSON.stringify(shopping));
+    }, [shopping]);
+
     const [showOverlay, setShowOverlay] = useState(false);
 
     const handleShoppingAdd = (item) => {

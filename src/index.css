@@ -43,3 +43,13 @@
     background-color: #f8d7da;
     border-color: #f5c6cb;
 }
+
+.btn_more {
+    background-color: #d4edda;
+    border-color: #c3e6cb;
+}
+
+.btn_more a {
+    text-decoration: none;
+    color: #155724;
+}

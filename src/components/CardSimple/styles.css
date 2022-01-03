@@ -20,3 +20,8 @@
     width: 100%;
     transition: transform 0.5s;
 }
+
+.content_buttons {
+    display: flex;
+    gap: 1em;
+}

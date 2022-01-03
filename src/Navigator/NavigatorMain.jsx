@@ -1,6 +1,7 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
 import { Container } from "../components/Container";
+import { Footer } from "../components/Footer";
 import { Navb } from "../components/Navb/Navb";
 import { OverlayShop } from "../components/OverlayShop";
 import { useShoppingContext } from "../hooks/useShoppingContext";
@@ -30,6 +31,8 @@ export const NavigatorMain = () => {
             </Container>
 
             {showOverlay && <OverlayShop />}
+
+            <Footer />
         </div>
     );
 };
